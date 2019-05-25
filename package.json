@@ -1,0 +1,104 @@
+{
+  "name": "colorally",
+  "version": "1.0.0",
+  "description": "A command-line application for naming colors",
+  "author": "Oskar Grunning <oskargrunning@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/sQVe/colorally",
+  "repository": "github:sQVe/colorally",
+  "bugs": "https://github.com/sQVe/colorally/issues",
+  "keywords": [
+    "cli",
+    "color",
+    "javascript",
+    "name"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run build:colors && npm run move:colors && npm run build:cjs && npm run build:es && npm run build:umd",
+    "build:cjs": "BUILD_BUNDLE=cjs rollup -c",
+    "build:es": "BUILD_BUNDLE=es rollup -c",
+    "build:umd": "BUILD_BUNDLE=umd rollup -c",
+    "build:colors": "BUILD_BUNDLE=colors rollup -c && node .tmp/scraper.js",
+    "move:colors": "mkdir -p lib es && cp .tmp/colors.json lib/ && cp .tmp/colors.json es/",
+    "clean": "rm -rf {.tmp,dist,es,lib}",
+    "format": "prettier-eslint --write '{**/*,*}.{js,json,jsx,md,yaml}'",
+    "format:check": "prettier-eslint --list-different '{**/*,*}.{js,json,jsx,md,yaml}'",
+    "lint": "eslint '{**/*,*}.{js,jsx}'",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:cov:up": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "test:integration": "jest --testPathIgnorePatterns --testPathPattern test/integration/*",
+    "test:watch": "jest --watch --onlyChanged"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "bin": {
+    "colorally": "./lib/colorally.js"
+  },
+  "main": "lib/colorally.js",
+  "files": [
+    "lib/"
+  ],
+  "devDependencies": {
+    "@babel/cli": "~7.4.3",
+    "@babel/core": "~7.4.0",
+    "@babel/plugin-transform-runtime": "~7.4.0",
+    "@babel/preset-env": "~7.4.2",
+    "@semantic-release/changelog": "~3.0.0",
+    "@semantic-release/git": "~7.0.0",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "~10.0.0",
+    "babel-jest": "~24.8.0",
+    "coveralls": "~3.0.0",
+    "eslint": "~5.16.0",
+    "eslint-config-sqve": "~2.2.2",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-react": "^7.12.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "~2.3.0",
+    "jest": "~24.8.0",
+    "lint-staged": "~8.1.0",
+    "prettier": "~1.17.0",
+    "prettier-eslint-cli": "~4.7.0",
+    "puppeteer": "~1.17.0",
+    "rollup": "~1.12.0",
+    "rollup-plugin-add-shebang": "~0.3.0",
+    "rollup-plugin-babel": "~4.3.0",
+    "rollup-plugin-commonjs": "~10.0.0",
+    "rollup-plugin-json": "~4.0.0",
+    "rollup-plugin-node-resolve": "~5.0.0",
+    "rollup-plugin-terser": "~5.0.0",
+    "semantic-release": "~15.13.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "~7.4.0",
+    "chalk": "~2.4.0",
+    "clipboardy": "~2.0.0",
+    "core-js": "~3.1.0",
+    "delta-e": "0.0.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier-eslint --write",
+      "eslint",
+      "jest --findRelatedTests",
+      "git add"
+    ],
+    "*.json": [
+      "prettier-eslint --write",
+      "git add"
+    ]
+  }
+}
