@@ -5,7 +5,7 @@
 import path from 'path'
 import fs from 'fs'
 
-import { compose } from './utility'
+import { compose, isArrayEqual } from './utility'
 import { hexToRgb, strToHex } from './converters'
 
 export const convertToDefinitions = res =>
@@ -37,12 +37,6 @@ export const ensureUniqueDefinitions = definitions =>
         : [...acc, x],
     []
   )
-
-export const flatten = arr =>
-  arr.reduce ((acc, v) => acc.concat (Array.isArray (v) ? flatten (v) : v), [])
-
-export const isArrayEqual = (a, b) =>
-  a.length === b.length && a.every ((x, idx) => x === b[idx])
 
 export const isAlternativeDefinition = def => /\(.+\)/.test (def.name)
 export const isWebDefinition = def => /\(web\)/i.test (def.name)

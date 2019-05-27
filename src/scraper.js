@@ -4,14 +4,13 @@
 
 import puppeteer from 'puppeteer'
 
+import { compose, flatten } from './utility'
 import {
   convertToDefinitions,
   ensureUniqueDefinitions,
-  flatten,
   sortDefinitions,
   writeToFile,
 } from './helpers'
-import { compose } from './utility'
 
 const processColorhexa = async browser => {
   const page = await browser.newPage ()
