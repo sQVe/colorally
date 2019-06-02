@@ -1,6 +1,6 @@
-//  ┏━┓┏━╸┏━┓┏━┓┏━┓┏━╸┏━┓
-//  ┗━┓┃  ┣┳┛┣━┫┣━┛┣╸ ┣┳┛
-//  ┗━┛┗━╸╹┗╸╹ ╹╹  ┗━╸╹┗╸
+//  ┏━╸┏━┓╻  ┏━┓┏━┓   ┏━┓┏━╸┏━┓┏━┓┏━┓┏━╸┏━┓
+//  ┃  ┃ ┃┃  ┃ ┃┣┳┛   ┗━┓┃  ┣┳┛┣━┫┣━┛┣╸ ┣┳┛
+//  ┗━╸┗━┛┗━╸┗━┛╹┗╸   ┗━┛┗━╸╹┗╸╹ ╹╹  ┗━╸╹┗╸
 
 import puppeteer from 'puppeteer'
 
@@ -85,7 +85,7 @@ const scrapeSources = async browser => {
   try {
     const browser = await puppeteer.launch ()
 
-    writeToFile (await scrapeSources (browser)) ('../.tmp/colors.json')
+    writeToFile (await scrapeSources (browser)) ('../data/colors.json')
 
     await browser.close ()
   } catch (err) {

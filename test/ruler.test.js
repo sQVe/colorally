@@ -5,7 +5,7 @@
 import { definitions, getDefinitionByName } from './setup'
 import { findSimilarDefinition, measureDistance } from '../src/ruler'
 
-describe('Ruler', () => {
+describe('module: ruler', () => {
   describe('measureDistance', () => {
     it('should measure the distance between white and black', () =>
       expect(

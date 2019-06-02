@@ -12,7 +12,8 @@ export const flatten = arr =>
 export const isArrayEqual = (a, b) =>
   a.length === b.length && a.every ((x, idx) => x === b[idx])
 
-// export const isString = x => typeof x === 'string'
+export const isEmpty = x => x == null || !(Object.keys (x) || x).length
+export const isString = x => typeof x === 'string'
 export const take = n => arr => arr.slice (0, n)
 export const zipObj = ks => vs =>
   ks.reduce ((acc, k, idx) => ({ ...acc, [k]: vs[idx] }), {})

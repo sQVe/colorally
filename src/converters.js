@@ -4,7 +4,7 @@
 
 import { add, compose, take } from './utility'
 
-const trimHash = str => str.replace (/^#/, '')
+const omitTypeIndicators = str => str.replace (/^#|0x/, '')
 const expandShortHex = str =>
   str.length === 3
     ? Array.from (str)
@@ -36,12 +36,14 @@ export const hexToRgb = hex => {
   return [r, g, b]
 }
 
-export const strToHex = compose (
-  convertStringToHex,
-  expandShortHex,
-  take (6),
-  trimHash
-)
+export const strToHex =
+  // TODO: Test if given "0x000000" string.
+  compose (
+    convertStringToHex,
+    expandShortHex,
+    take (6),
+    omitTypeIndicators
+  )
 
 export const rgbToLab = compose (
   xyzToLab,

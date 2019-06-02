@@ -5,7 +5,7 @@
 import { hexToRgb, rgbToLab, strToHex } from '../src/converters'
 import { definitions } from './setup'
 
-describe('Converters', () => {
+describe('module: converters', () => {
   describe('hexToRgb', () => {
     definitions.forEach(def =>
       it(`should convert hex to RGB (${def.name})`, () =>
