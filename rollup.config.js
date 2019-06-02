@@ -3,19 +3,20 @@ import commonjs from 'rollup-plugin-commonjs'
 import json from 'rollup-plugin-json'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import shebang from 'rollup-plugin-add-shebang'
-import { terser } from 'rollup-plugin-terser'
 
 import pkg from './package.json'
 
 const bundleTarget = process.env.BUILD_BUNDLE
 const dependencies = [
-  // ...Object.keys (pkg.dependencies || {}),
-  ...Object.keys (pkg.peerDependencies || {}),
   'core-js',
+  'data/colors',
   'fs',
   'path',
   'puppeteer',
+  ...Object.keys (pkg.dependencies || {}),
+  ...Object.keys (pkg.peerDependencies || {}),
 ]
+
 const isArrayLike = x => x != null && typeof x[Symbol.iterator] === 'function'
 const isNil = (...xs) => xs.some (x => x == null)
 const isObjectLike = x => x != null && typeof x === 'object'
@@ -37,20 +38,16 @@ const presetBundleDefaults = defaults => opts =>
     {}
   )
 
-const externalDependencies = dependencies => id =>
+const external = dependencies => id =>
   dependencies.map (dep => removeRelativePath (id).startsWith (dep)).some (Boolean)
 
 const bundle = presetBundleDefaults ({
-  external: externalDependencies (dependencies),
+  external: external (dependencies),
   input: 'src/index.js',
   output: { exports: 'named', indent: false },
   plugins: [
     nodeResolve (),
-    commonjs ({
-      namedExports: {
-        'node_modules/delta-e/src/index.js': ['getDeltaE00'],
-      },
-    }),
+    commonjs (),
     json (),
     shebang ({
       include: `lib/${pkg.name}.js`,
@@ -61,41 +58,30 @@ const bundle = presetBundleDefaults ({
 
 const bundles = [
   bundle ({
-    external: externalDependencies ([...dependencies, 'lib/colors']),
     output: { format: 'cjs', file: `lib/${pkg.name}.js` },
     plugins: [babel ({ runtimeHelpers: true })],
     type: 'cjs',
   }),
   bundle ({
-    external: externalDependencies ([...dependencies, 'lib/colors']),
-    output: { format: 'es', file: `es/${pkg.name}.mjs` },
+    input: 'src/cli.js',
+    output: { format: 'cjs', file: `lib/cli.js` },
+    plugins: [babel ({ runtimeHelpers: true })],
+    type: 'cli',
+  }),
+  bundle ({
+    output: { format: 'es', file: `es/${pkg.name}.js` },
     plugins: [babel ({ runtimeHelpers: true })],
     type: 'es',
   }),
   bundle ({
-    output: { format: 'umd', file: `dist/${pkg.name}.js`, name: pkg.name },
-    plugins: [babel ({ exclude: 'node_modules/**' })],
-    type: 'umd',
-  }),
-  bundle ({
-    output: { format: 'umd', file: `dist/${pkg.name}.min.js`, name: pkg.name },
-    plugins: [
-      babel ({ exclude: 'node_modules/**' }),
-      terser ({
-        compress: {
-          pure_getters: true,
-          unsafe: true,
-          unsafe_comps: true,
-          warnings: false,
-        },
-      }),
-    ],
-    type: 'umd',
+    output: { format: 'es', file: `es/${pkg.name}.mjs` },
+    plugins: [babel ({ runtimeHelpers: true })],
+    type: 'es',
   }),
   {
-    external: externalDependencies (dependencies),
-    input: 'src/scraper.js',
-    output: { format: 'cjs', file: '.tmp/scraper.js' },
+    external: external (dependencies),
+    input: 'src/color-scaper.js',
+    output: { format: 'cjs', file: '.tmp/color-scraper.js' },
     plugins: [json ()],
     type: 'colors',
   },
