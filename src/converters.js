@@ -36,14 +36,12 @@ export const hexToRgb = hex => {
   return [r, g, b]
 }
 
-export const strToHex =
-  // TODO: Test if given "0x000000" string.
-  compose (
-    convertStringToHex,
-    expandShortHex,
-    take (6),
-    omitTypeIndicators
-  )
+export const strToHex = compose (
+  convertStringToHex,
+  expandShortHex,
+  take (6),
+  omitTypeIndicators
+)
 
 export const rgbToLab = compose (
   xyzToLab,

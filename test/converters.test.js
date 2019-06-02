@@ -14,10 +14,16 @@ describe('module: converters', () => {
   })
 
   describe('strToHex', () => {
-    definitions.forEach(def =>
-      it(`should convert hex-string to hex (${def.name})`, () =>
+    definitions.forEach(def => {
+      it(`should convert clean hex-string to hex (${def.name})`, () =>
         expect(strToHex(def.hexString)).toEqual(def.hex))
-    )
+
+      it(`should convert leading # hex-string to hex (${def.name})`, () =>
+        expect(strToHex('#' + def.hexString)).toEqual(def.hex))
+
+      it(`should convert leading 0x hex-string to hex (${def.name})`, () =>
+        expect(strToHex('#' + def.hexString)).toEqual(def.hex))
+    })
 
     definitions
       .filter(def => def.shortHexString != null)
@@ -25,11 +31,6 @@ describe('module: converters', () => {
         it(`should convert short hex-string to hex (${def.name})`, () =>
           expect(strToHex(def.shortHexString)).toEqual(def.hex))
       )
-
-    it('should handle hex-strings without leading hash', () => {
-      expect(strToHex('000000')).toEqual(0x000000)
-      expect(strToHex('ffffff')).toEqual(0xffffff)
-    })
   })
 
   describe('rgbToLab', () => {
