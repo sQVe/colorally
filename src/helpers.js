@@ -5,6 +5,7 @@
 import path from 'path'
 import fs from 'fs'
 
+import { toTitleCase } from './helpers'
 import { compose, isArrayEqual } from './utility'
 import { hexToRgb, strToHex } from './converters'
 
@@ -41,12 +42,6 @@ export const ensureUniqueDefinitions = definitions =>
 export const isAlternativeDefinition = def => /\(.+\)/.test (def.name)
 export const isWebDefinition = def => /\(web\)/i.test (def.name)
 export const removeWebIndicator = str => str.replace (/\(web\)$/, '').trim ()
-export const toTitleCase = str =>
-  str
-    .split (/\s+/)
-    .map (([head, ...tail]) => head.toUpperCase () + tail.join (''))
-    .join (' ')
-
 export const trimSpecialCharacters = str => str.match (/[\w\d-_]+/g).join (' ')
 
 export const sortDefinitions = definitions =>

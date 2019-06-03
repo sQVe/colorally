@@ -2,10 +2,6 @@
 //  ┃  ┃ ┃┃  ┃ ┃┣┳┛┣━┫┃  ┃  ┗┳┛
 //  ┗━╸┗━┛┗━╸┗━┛╹┗╸╹ ╹┗━╸┗━╸ ╹
 
-// https://www.easyrgb.com/en/convert.php
-// https://github.com/antimatter15/rgb-lab/blob/master/color.js
-// https://github.com/zschuessler/DeltaE
-
 import { isString } from './utility'
 import { hexToRgb, strToHex } from './converters'
 import { findSimilarDefinition } from './ruler'

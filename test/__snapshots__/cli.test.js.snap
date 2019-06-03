@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`module: cli run should omit color block when no truecolor support 1`] = `
+Array [
+  Array [
+    "Found [1mBlack[22m [3m(0, 0, 0)[23m by a distance of [3m0.0000[23m.",
+  ],
+  Array [
+    "Found [1mBlack[22m [3m(0, 0, 0)[23m by a distance of [3m0.0000[23m.",
+  ],
+]
+`;
+
+exports[`module: cli run should output usage information given --help option 1`] = `
+Array [
+  Array [
+    "[34mcolorally[39m - Name colors by well-known definitions
+
+[1mUSAGE[22m
+
+  [34mcolorally[39m [option...] [[4mhex[24m]
+  [34mcolorally[39m [option...] [[4mred[24m] [[4mgreen[24m] [[4mblue[24m]
+
+  The [4mhex[24m underline can contain either [1m3[22m or [1m6 digits[22m with an optional leading
+  [1m0x[22m or [1m#[22m.
+
+  The [4mred[24m, [4mgreen[24m and [4mblue[24m arguments may only contain digits.
+
+[1mOPTIONS[22m
+
+  -V, --version            output version number
+  -c, --copy               copy definition to clipboard
+  -f, --format [4mcase[24m        output definition in specified format
+  -h, --help               output usage information
+  -v, --verbose            provide a more talkative result
+
+  The [4mcase[24m argument can be either [1mcamel[22m [3mfooBar[23m, [1mconstant[22m [3mFOO_BAR[23m, [1mdot[22m [3mfoo.bar[23m,
+  [1mkebab[22m [3mfoo-bar[23m, [1mlower[22m [3mfoo bar[23m, [1mpascal[22m  [3mFooBar[23m, [1msnake[22m [3mfoo_bar[23m [1mtitle[22m [3mFoo Bar[23m or
+  [1mupper[22m [3mFOO BAR[23m. By default, [34mcolorally[39m sets [4mcase[24m as [1mtitle[22m.
+  ",
+  ],
+]
+`;
+
+exports[`module: cli run should output usage information given -h option 1`] = `
+Array [
+  Array [
+    "[34mcolorally[39m - Name colors by well-known definitions
+
+[1mUSAGE[22m
+
+  [34mcolorally[39m [option...] [[4mhex[24m]
+  [34mcolorally[39m [option...] [[4mred[24m] [[4mgreen[24m] [[4mblue[24m]
+
+  The [4mhex[24m underline can contain either [1m3[22m or [1m6 digits[22m with an optional leading
+  [1m0x[22m or [1m#[22m.
+
+  The [4mred[24m, [4mgreen[24m and [4mblue[24m arguments may only contain digits.
+
+[1mOPTIONS[22m
+
+  -V, --version            output version number
+  -c, --copy               copy definition to clipboard
+  -f, --format [4mcase[24m        output definition in specified format
+  -h, --help               output usage information
+  -v, --verbose            provide a more talkative result
+
+  The [4mcase[24m argument can be either [1mcamel[22m [3mfooBar[23m, [1mconstant[22m [3mFOO_BAR[23m, [1mdot[22m [3mfoo.bar[23m,
+  [1mkebab[22m [3mfoo-bar[23m, [1mlower[22m [3mfoo bar[23m, [1mpascal[22m  [3mFooBar[23m, [1msnake[22m [3mfoo_bar[23m [1mtitle[22m [3mFoo Bar[23m or
+  [1mupper[22m [3mFOO BAR[23m. By default, [34mcolorally[39m sets [4mcase[24m as [1mtitle[22m.
+  ",
+  ],
+]
+`;
+
+exports[`module: cli run should output usage information given no value 1`] = `
+Array [
+  Array [
+    "[34mcolorally[39m - Name colors by well-known definitions
+
+[1mUSAGE[22m
+
+  [34mcolorally[39m [option...] [[4mhex[24m]
+  [34mcolorally[39m [option...] [[4mred[24m] [[4mgreen[24m] [[4mblue[24m]
+
+  The [4mhex[24m underline can contain either [1m3[22m or [1m6 digits[22m with an optional leading
+  [1m0x[22m or [1m#[22m.
+
+  The [4mred[24m, [4mgreen[24m and [4mblue[24m arguments may only contain digits.
+
+[1mOPTIONS[22m
+
+  -V, --version            output version number
+  -c, --copy               copy definition to clipboard
+  -f, --format [4mcase[24m        output definition in specified format
+  -h, --help               output usage information
+  -v, --verbose            provide a more talkative result
+
+  The [4mcase[24m argument can be either [1mcamel[22m [3mfooBar[23m, [1mconstant[22m [3mFOO_BAR[23m, [1mdot[22m [3mfoo.bar[23m,
+  [1mkebab[22m [3mfoo-bar[23m, [1mlower[22m [3mfoo bar[23m, [1mpascal[22m  [3mFooBar[23m, [1msnake[22m [3mfoo_bar[23m [1mtitle[22m [3mFoo Bar[23m or
+  [1mupper[22m [3mFOO BAR[23m. By default, [34mcolorally[39m sets [4mcase[24m as [1mtitle[22m.
+  ",
+  ],
+]
+`;
+
+exports[`module: cli run should provide a more talkative result given --verbose option  1`] = `
+Array [
+  Array [
+    "Found [48;2;0;0;0m   [49m [1mBlack[22m [3m(0, 0, 0)[23m by a distance of [3m0.0000[23m.",
+  ],
+]
+`;
+
+exports[`module: cli run should provide a more talkative result given -v option  1`] = `
+Array [
+  Array [
+    "Found [48;2;0;0;0m   [49m [1mBlack[22m [3m(0, 0, 0)[23m by a distance of [3m0.0000[23m.",
+  ],
+]
+`;

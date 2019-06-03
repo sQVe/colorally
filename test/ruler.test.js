@@ -7,65 +7,74 @@ import { findSimilarDefinition, measureDistance } from '../src/ruler'
 
 describe('module: ruler', () => {
   describe('measureDistance', () => {
-    it('should measure the distance between white and black', () =>
+    it('should measure the distance between white and black', () => {
       expect(
         measureDistance(
           getDefinitionByName('White').rgb,
           getDefinitionByName('Black').rgb
         )
-      ).toEqual(100.00000085247008))
+      ).toEqual(100.00000085247008)
+    })
 
-    it('should measure the distance between black and black', () =>
+    it('should measure the distance between black and black', () => {
       expect(
         measureDistance(
           getDefinitionByName('Black').rgb,
           getDefinitionByName('Black').rgb
         )
-      ).toEqual(0))
+      ).toEqual(0)
+    })
 
-    it('should measure the distance between black and lightened black', () =>
+    it('should measure the distance between black and lightened black', () => {
       expect(
         measureDistance(getDefinitionByName('Black').rgb, [10, 10, 10])
-      ).toEqual(1.5881488296869715))
+      ).toEqual(1.5881488296869715)
+    })
 
-    it('should measure the distance between black and red tinted black', () =>
+    it('should measure the distance between black and red tinted black', () => {
       expect(
         measureDistance(getDefinitionByName('Black').rgb, [10, 0, 0])
-      ).toEqual(3.7095842797141665))
+      ).toEqual(3.7095842797141665)
+    })
 
-    it('should measure the distance between black and green tinted black', () =>
+    it('should measure the distance between black and green tinted black', () => {
       expect(
         measureDistance(getDefinitionByName('Black').rgb, [0, 10, 0])
-      ).toEqual(5.898345162587695))
+      ).toEqual(5.898345162587695)
+    })
 
-    it('should measure the distance between black and blue tinted black', () =>
+    it('should measure the distance between black and blue tinted black', () => {
       expect(
         measureDistance(getDefinitionByName('Black').rgb, [0, 0, 10])
-      ).toEqual(3.9407659973271505))
+      ).toEqual(3.9407659973271505)
+    })
 
-    it('should measure the distance between red and green', () =>
+    it('should measure the distance between red and green', () => {
       expect(
         measureDistance(
           getDefinitionByName('Red').rgb,
           getDefinitionByName('Green').rgb
         )
-      ).toEqual(72.18522864490578))
+      ).toEqual(72.18522864490578)
+    })
 
-    it('should measure the distance between green and blue', () =>
+    it('should measure the distance between green and blue', () => {
       expect(
         measureDistance(
           getDefinitionByName('Green').rgb,
           getDefinitionByName('Blue').rgb
         )
-      ).toEqual(62.655622825086056))
+      ).toEqual(62.655622825086056)
+    })
 
-    it('should measure the distance between gray and silver', () =>
+    it('should measure the distance between gray and silver', () => {
       expect(
         measureDistance(
           getDefinitionByName('Gray').rgb,
           getDefinitionByName('Silver').rgb
         )
-      ).toEqual(19.679102165309864))
+      ).toEqual(19.679102165309864)
+    })
   })
 
   describe('findSimilarDefinition', () => {

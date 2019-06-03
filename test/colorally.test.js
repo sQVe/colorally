@@ -24,10 +24,6 @@ hexToRgb.mockImplementation(() => fixtures.rgb)
 strToHex.mockImplementation(() => fixtures.hex)
 
 describe('module: colorally', () => {
-  beforeEach(() => {
-    jest.clearAllMocks()
-  })
-
   describe('colorally', () => {
     it('should enforce numbers in given array', () => {
       colorally(fixtures.rgb)

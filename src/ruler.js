@@ -18,18 +18,18 @@ export const measureDistance = (...rgbs) =>
   )
 
 export const findSimilarDefinition = definitions => rgb => {
+  const getNearestDefinition = nearest => current =>
+    nearest == null || nearest.distance > current.distance ? current : nearest
+
   const traverseDefinitions = (nearest, idx = 0) => {
     if (idx === definitions.length) return nearest
 
     const def = definitions[idx]
     const current = { ...def, distance: measureDistance (rgb, def.rgb) }
 
-    const getNearestDefinition = () =>
-      nearest == null || nearest.distance > current.distance ? current : nearest
-
     return current.distance === 0
       ? current
-      : traverseDefinitions (getNearestDefinition (), idx + 1)
+      : traverseDefinitions (getNearestDefinition (nearest) (current), idx + 1)
   }
 
   return traverseDefinitions ()
