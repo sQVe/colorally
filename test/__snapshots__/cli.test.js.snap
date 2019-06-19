@@ -21,7 +21,7 @@ Array [
   [34mcolorally[39m [option...] [[4mhex[24m]
   [34mcolorally[39m [option...] [[4mred[24m] [[4mgreen[24m] [[4mblue[24m]
 
-  The [4mhex[24m underline can contain either [1m3[22m or [1m6 digits[22m with an optional leading
+  The [4mhex[24m argument can contain either [1m3[22m or [1m6 digits[22m with an optional leading
   [1m0x[22m or [1m#[22m.
 
   The [4mred[24m, [4mgreen[24m and [4mblue[24m arguments may only contain digits.
@@ -52,7 +52,7 @@ Array [
   [34mcolorally[39m [option...] [[4mhex[24m]
   [34mcolorally[39m [option...] [[4mred[24m] [[4mgreen[24m] [[4mblue[24m]
 
-  The [4mhex[24m underline can contain either [1m3[22m or [1m6 digits[22m with an optional leading
+  The [4mhex[24m argument can contain either [1m3[22m or [1m6 digits[22m with an optional leading
   [1m0x[22m or [1m#[22m.
 
   The [4mred[24m, [4mgreen[24m and [4mblue[24m arguments may only contain digits.
@@ -83,7 +83,7 @@ Array [
   [34mcolorally[39m [option...] [[4mhex[24m]
   [34mcolorally[39m [option...] [[4mred[24m] [[4mgreen[24m] [[4mblue[24m]
 
-  The [4mhex[24m underline can contain either [1m3[22m or [1m6 digits[22m with an optional leading
+  The [4mhex[24m argument can contain either [1m3[22m or [1m6 digits[22m with an optional leading
   [1m0x[22m or [1m#[22m.
 
   The [4mred[24m, [4mgreen[24m and [4mblue[24m arguments may only contain digits.

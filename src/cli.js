@@ -54,7 +54,7 @@ const printHelp = exitCode => {
   {blue colorally} [option...] [{underline hex}]
   {blue colorally} [option...] [{underline red}] [{underline green}] [{underline blue}]
 
-  The {underline hex} underline can contain either {bold 3} or {bold 6 digits} ` +
+  The {underline hex} argument can contain either {bold 3} or {bold 6 digits} ` +
       chalk`with an optional leading
   {bold 0x} or {bold #}.
 
