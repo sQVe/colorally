@@ -45,14 +45,7 @@ const bundle = presetBundleDefaults ({
   external: external (dependencies),
   input: 'src/index.js',
   output: { exports: 'named', indent: false },
-  plugins: [
-    nodeResolve (),
-    commonjs (),
-    json (),
-    shebang ({
-      include: `lib/${pkg.name}.js`,
-    }),
-  ],
+  plugins: [nodeResolve (), commonjs (), json ()],
   treeshake: true,
 })
 
@@ -65,7 +58,12 @@ const bundles = [
   bundle ({
     input: 'src/cli.js',
     output: { format: 'cjs', file: `lib/cli.js` },
-    plugins: [babel ({ runtimeHelpers: true })],
+    plugins: [
+      babel ({ runtimeHelpers: true }),
+      shebang ({
+        include: `lib/cli.js`,
+      }),
+    ],
     type: 'cli',
   }),
   bundle ({
