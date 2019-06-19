@@ -167,7 +167,7 @@ MIT License
 [how-to-clone]: https://help.github.com/articles/cloning-a-repository
 [how-to-fork]: https://help.github.com/articles/fork-a-repo
 [issue-tracker]: https://github.com/sQVe/colorally/issues
-[license-badge]: https://img.shields.io/github/license/sQVe/colorally.svg
+[license-badge]: https://img.shields.io/github/license/sqve/colorally.svg
 [license]: https://github.com/sQVe/colorally/blob/develop/LICENSE
 [npm-badge]: https://img.shields.io/npm/v/colorally.svg
 [npm-install]: https://docs.npmjs.com/cli/install
