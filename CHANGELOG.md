@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/sQVe/colorally/compare/v1.0.0...v1.0.1) (2019-06-19)
+
+
+### Bug Fixes
+
+* **cli:** properly add shebang ([1f768ae](https://github.com/sQVe/colorally/commit/1f768ae))
+
 # 1.0.0 (2019-06-19)
 
 
