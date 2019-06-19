@@ -5,8 +5,7 @@
 import path from 'path'
 import fs from 'fs'
 
-import { toTitleCase } from './helpers'
-import { compose, isArrayEqual } from './utility'
+import { compose, isArrayEqual, toTitleCase } from './utility'
 import { hexToRgb, strToHex } from './converters'
 
 export const convertToDefinitions = res =>
@@ -48,4 +47,7 @@ export const sortDefinitions = definitions =>
   [...definitions].sort ((a, b) => a.name.localeCompare (b.name)) // eslint-disable-line fp/no-mutating-methods
 
 export const writeToFile = data => location =>
-  fs.writeFileSync (path.resolve (__dirname, location), JSON.stringify (data))
+  fs.writeFileSync (
+    path.resolve (__dirname, location),
+    JSON.stringify (data, null, 2) // eslint-disable-line fp/no-nil
+  )
