@@ -2,13 +2,13 @@
 //  ┃  ┃ ┃┃┗┫┃┏┛┣╸ ┣┳┛ ┃ ┣╸ ┣┳┛┗━┓
 //  ┗━╸┗━┛╹ ╹┗┛ ┗━╸╹┗╸ ╹ ┗━╸╹┗╸┗━┛
 
-import { add, compose, take } from './utility'
+import { duplicate, compose, take } from './utility'
 
 const omitTypeIndicators = str => str.replace (/^#|0x/, '')
 const expandShortHex = str =>
   str.length === 3
     ? Array.from (str)
-        .map (add)
+        .map (duplicate)
         .join ('')
     : str
 const convertStringToHex = str => parseInt (str, 16)
