@@ -2,7 +2,7 @@
 //  ┃ ┃ ┃ ┃┃  ┃ ┃ ┗┳┛
 //  ┗━┛ ╹ ╹┗━╸╹ ╹  ╹
 
-export const add = x => x + x
+export const duplicate = x => x + x
 export const compose = (...fns) =>
   fns.reduce ((f, g) => (...args) => f (g (...args)))
 
