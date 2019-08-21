@@ -23,7 +23,7 @@ const processColorhexa = async browser => {
     const tableRowElements = tableBodyElement.querySelectorAll ('tr')
 
     return Array.from (tableRowElements).map (tableRowElement => {
-      const [name, val] = tableRowElement.children // eslint-disable-line no-unused-vars
+      const [name, val] = tableRowElement.children
 
       return {
         name: name.firstChild.textContent.trim (),
@@ -54,7 +54,7 @@ const processWikipedia = async browser => {
         const tableRowElements = tableBodyElement.querySelectorAll ('tr')
 
         return Array.from (tableRowElements).map (tableRowElement => {
-          const [name, val] = tableRowElement.children // eslint-disable-line no-unused-vars
+          const [name, val] = tableRowElement.children
 
           return {
             name: name.firstChild.textContent.trim (),
