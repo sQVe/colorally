@@ -19,7 +19,7 @@
     "build:cli": "BUILD_BUNDLE=cli rollup -c",
     "build:colors": "BUILD_BUNDLE=colors rollup -c",
     "build:es": "BUILD_BUNDLE=es rollup -c",
-    "clean": "rm -rf {.tmp,dist,es,lib}",
+    "clean": "rm -rf {.tmp,es,lib}",
     "format": "prettier --write '{**/*,*}.{js,json,jsx,md,yaml}' && eslint --fix '{**/*,*}.{js,jsx}'",
     "lint": "eslint '{**/*,*}.{js,jsx}'",
     "prepublishOnly": "npm run build",
