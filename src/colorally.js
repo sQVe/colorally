@@ -14,9 +14,9 @@ import colors from '../data/colors.json'
  * @returns {object} A color definition object with name, rgb array and optional match statistics.
  */
 export default function colorally(color) {
-  const rgb = Array.isArray (color)
-    ? color.map (Number)
-    : hexToRgb (isString (color) ? strToHex (color) : color)
+  const rgb = Array.isArray(color)
+    ? color.map(Number)
+    : hexToRgb(isString(color) ? strToHex(color) : color)
 
-  return findSimilarDefinition (colors) (rgb)
+  return findSimilarDefinition(colors)(rgb)
 }
