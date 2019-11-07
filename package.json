@@ -87,7 +87,7 @@
     "@babel/runtime": "~7.7.1",
     "chalk": "~2.4.0",
     "clipboardy": "~2.1.0",
-    "core-js": "~3.3.2",
+    "core-js": "~3.4.0",
     "delta-e": "0.0.7"
   },
   "husky": {
