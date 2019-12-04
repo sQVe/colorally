@@ -8,10 +8,10 @@ import { compose, zipObj } from './utility'
 import { rgbToLab } from './converters'
 
 export const measureDistance = (...rgbs) =>
-  getDeltaEDistance (
-    ...rgbs.map (
-      compose (
-        zipObj (['L', 'A', 'B']),
+  getDeltaEDistance(
+    ...rgbs.map(
+      compose(
+        zipObj(['L', 'A', 'B']),
         rgbToLab
       )
     )
@@ -25,12 +25,12 @@ export const findSimilarDefinition = definitions => rgb => {
     if (idx === definitions.length) return nearest
 
     const def = definitions[idx]
-    const current = { ...def, distance: measureDistance (rgb, def.rgb) }
+    const current = { ...def, distance: measureDistance(rgb, def.rgb) }
 
     return current.distance === 0
       ? current
-      : traverseDefinitions (getNearestDefinition (nearest) (current), idx + 1)
+      : traverseDefinitions(getNearestDefinition(nearest)(current), idx + 1)
   }
 
-  return traverseDefinitions ()
+  return traverseDefinitions()
 }

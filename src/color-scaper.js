@@ -13,21 +13,21 @@ import {
 } from './helpers'
 
 const processColorhexa = async browser => {
-  const page = await browser.newPage ()
+  const page = await browser.newPage()
 
-  await page.goto ('https://www.colorhexa.com/color-names')
-  await page.waitForSelector ('table.color-list')
+  await page.goto('https://www.colorhexa.com/color-names')
+  await page.waitForSelector('table.color-list')
 
-  return page.evaluate (() => {
-    const tableBodyElement = document.querySelector ('table.color-list > tbody')
-    const tableRowElements = tableBodyElement.querySelectorAll ('tr')
+  return page.evaluate(() => {
+    const tableBodyElement = document.querySelector('table.color-list > tbody')
+    const tableRowElements = tableBodyElement.querySelectorAll('tr')
 
-    return Array.from (tableRowElements).map (tableRowElement => {
-      const [name, val] = tableRowElement.children // eslint-disable-line no-unused-vars
+    return Array.from(tableRowElements).map(tableRowElement => {
+      const [name, val] = tableRowElement.children
 
       return {
-        name: name.firstChild.textContent.trim (),
-        val: val.firstChild.textContent.trim (),
+        name: name.firstChild.textContent.trim(),
+        val: val.firstChild.textContent.trim(),
       }
     })
   })
@@ -40,25 +40,25 @@ const processWikipedia = async browser => {
     'List_of_colors:_N%E2%80%93Z',
   ]
 
-  return Promise.all (
-    paths.map (async path => {
-      const page = await browser.newPage ()
+  return Promise.all(
+    paths.map(async path => {
+      const page = await browser.newPage()
 
-      await page.goto ('https://en.wikipedia.org/wiki/' + path)
-      await page.waitForSelector ('table.wikitable')
+      await page.goto('https://en.wikipedia.org/wiki/' + path)
+      await page.waitForSelector('table.wikitable')
 
-      return page.evaluate (() => {
-        const tableBodyElement = document.querySelector (
+      return page.evaluate(() => {
+        const tableBodyElement = document.querySelector(
           'table.wikitable > tbody'
         )
-        const tableRowElements = tableBodyElement.querySelectorAll ('tr')
+        const tableRowElements = tableBodyElement.querySelectorAll('tr')
 
-        return Array.from (tableRowElements).map (tableRowElement => {
-          const [name, val] = tableRowElement.children // eslint-disable-line no-unused-vars
+        return Array.from(tableRowElements).map(tableRowElement => {
+          const [name, val] = tableRowElement.children
 
           return {
-            name: name.firstChild.textContent.trim (),
-            val: val.textContent.trim (),
+            name: name.firstChild.textContent.trim(),
+            val: val.textContent.trim(),
           }
         })
       })
@@ -67,29 +67,29 @@ const processWikipedia = async browser => {
 }
 
 const scrapeSources = async browser => {
-  const res = await Promise.all ([
-    processColorhexa (browser),
-    processWikipedia (browser),
+  const res = await Promise.all([
+    processColorhexa(browser),
+    processWikipedia(browser),
   ])
 
-  return compose (
+  return compose(
     sortDefinitions,
     ensureUniqueDefinitions,
     convertToDefinitions,
     flatten
-  ) (res)
+  )(res)
 }
 
 // eslint-disable-next-line fp/no-nil
 ;(async () => {
   try {
-    const browser = await puppeteer.launch ()
+    const browser = await puppeteer.launch()
 
-    writeToFile (await scrapeSources (browser)) ('../data/colors.json')
+    writeToFile(await scrapeSources(browser))('../data/colors.json')
 
-    await browser.close ()
+    await browser.close()
   } catch (err) {
-    console.error (err)
-    process.exit (1)
+    console.error(err)
+    process.exit(1)
   }
-}) ()
+})()
