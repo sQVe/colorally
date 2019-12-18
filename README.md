@@ -8,7 +8,7 @@
 
 [![NPM][npm-badge]][npm]
 [![build][travis-badge]][travis]
-[![coveralls][coveralls-badge]][coveralls]
+[![codecov][codecov-badge]][codecov]
 [![dependabot][dependabot-badge]][dependabot]
 [![semantic-release][semantic-release-badge]][semantic-release]
 [![license][license-badge]][license]
@@ -157,10 +157,10 @@ MIT License
 <!-- References -->
 
 [angular-commit-conventions]: https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines
+[codecov-badge]: https://codecov.io/gh/sQVe/colorally/branch/develop/graph/badge.svg
+[codecov]: https://codecov.io/gh/sQVe/colorally
 [color-difference]: https://en.wikipedia.org/wiki/Color_difference
 [colorhexa-definitions]: https://www.colorhexa.com/color-names
-[coveralls-badge]: https://coveralls.io/repos/github/sQVe/colorally/badge.svg
-[coveralls]: https://coveralls.io/github/sQVe/colorally
 [dependabot-badge]: https://api.dependabot.com/badges/status?host=github&repo=sQVe/colorally
 [dependabot]: https://dependabot.com
 [functional-programming]: https://en.wikipedia.org/wiki/Functional_programming
