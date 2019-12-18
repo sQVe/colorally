@@ -28,7 +28,7 @@
     "scrape:format": "prettier --write data/colors.json",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "test:coverage:upload": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "test:coverage:upload": "jest --coverage && codecov",
     "test:watch": "jest --watch --onlyChanged"
   },
   "engines": {
@@ -58,7 +58,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "~10.0.0",
     "babel-jest": "~24.9.0",
-    "coveralls": "~3.0.0",
+    "codecov": "~3.6.0",
     "eslint": "~6.7.0",
     "eslint-config-sqve": "~2.6.0",
     "eslint-plugin-fp": "^2.3.0",
