@@ -43,7 +43,4 @@ export const strToHex = compose(
   omitTypeIndicators
 )
 
-export const rgbToLab = compose(
-  xyzToLab,
-  rgbToXyz
-)
+export const rgbToLab = compose(xyzToLab, rgbToXyz)

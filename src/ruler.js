@@ -8,14 +8,7 @@ import { compose, zipObj } from './utility'
 import { rgbToLab } from './converters'
 
 export const measureDistance = (...rgbs) =>
-  getDeltaEDistance(
-    ...rgbs.map(
-      compose(
-        zipObj(['L', 'A', 'B']),
-        rgbToLab
-      )
-    )
-  )
+  getDeltaEDistance(...rgbs.map(compose(zipObj(['L', 'A', 'B']), rgbToLab)))
 
 export const findSimilarDefinition = definitions => rgb => {
   const getNearestDefinition = nearest => current =>
