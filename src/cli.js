@@ -109,11 +109,7 @@ const parseArgs = args => {
     )(idx + increment)(arr)
   }
 
-  const parsedArgs = compose(
-    parse(defaults)(0),
-    flatten,
-    map(split('='))
-  )(args)
+  const parsedArgs = compose(parse(defaults)(0), flatten, map(split('=')))(args)
 
   return { ...parsedArgs, values: omitFalsyValues(parsedArgs.values) }
 }

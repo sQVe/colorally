@@ -18,15 +18,8 @@ export const convertToDefinitions = res =>
   )
 
 export const createDefinition = ({ name, val }) => ({
-  name: compose(
-    toTitleCase,
-    trimSpecialCharacters,
-    removeWebIndicator
-  )(name),
-  rgb: compose(
-    hexToRgb,
-    strToHex
-  )(val),
+  name: compose(toTitleCase, trimSpecialCharacters, removeWebIndicator)(name),
+  rgb: compose(hexToRgb, strToHex)(val),
 })
 
 export const ensureUniqueDefinitions = definitions =>
