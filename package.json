@@ -89,21 +89,5 @@
     "clipboardy": "~2.1.0",
     "core-js": "~3.6.0",
     "delta-e": "0.0.7"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "jest"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "prettier --write",
-      "eslint",
-      "jest --findRelatedTests"
-    ],
-    "*.json": [
-      "prettier --write"
-    ]
   }
 }
