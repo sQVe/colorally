@@ -83,7 +83,7 @@
     "typescript": "~3.8.0"
   },
   "dependencies": {
-    "@babel/runtime": "~7.8.0",
+    "@babel/runtime": "~7.9.2",
     "chalk": "~3.0.0",
     "clipboardy": "~2.2.0",
     "core-js": "~3.6.0",
