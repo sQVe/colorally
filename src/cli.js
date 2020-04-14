@@ -45,7 +45,7 @@ const optionDefinitions = [
   { name: 'version', identifier: /^(-V)|(--version)$/ },
 ]
 
-const printHelp = exitCode => {
+const printHelp = (exitCode) => {
   console.log(
     chalk`{blue colorally} - Name colors by well-known definitions
 
@@ -84,12 +84,12 @@ const printVersion = () => {
   return console.log('v' + version)
 }
 
-const findOption = str =>
-  optionDefinitions.find(opt => opt.identifier.test(str))
+const findOption = (str) =>
+  optionDefinitions.find((opt) => opt.identifier.test(str))
 
-const parseArgs = args => {
-  const omitFalsyValues = arr => arr.filter(Boolean)
-  const parse = acc => idx => arr => {
+const parseArgs = (args) => {
+  const omitFalsyValues = (arr) => arr.filter(Boolean)
+  const parse = (acc) => (idx) => (arr) => {
     const current = arr[idx]
     const next = arr[idx + 1] || false
 
@@ -114,7 +114,7 @@ const parseArgs = args => {
   return { ...parsedArgs, values: omitFalsyValues(parsedArgs.values) }
 }
 
-const formatDefinitionName = format => name => {
+const formatDefinitionName = (format) => (name) => {
   const formatMap = {
     camel: toCamelCase,
     constant: toConstantCase,
@@ -128,13 +128,13 @@ const formatDefinitionName = format => name => {
   }
   const validFormat =
     (format &&
-      Object.keys(formatMap).find(key => key === format.toLowerCase())) ||
+      Object.keys(formatMap).find((key) => key === format.toLowerCase())) ||
     'title'
 
   return formatMap[validFormat](name)
 }
 
-export const run = args => {
+export const run = (args) => {
   const { options, values } = parseArgs(args)
 
   if (options.help) return printHelp(0)

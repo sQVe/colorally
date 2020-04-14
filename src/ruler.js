@@ -10,8 +10,8 @@ import { rgbToLab } from './converters'
 export const measureDistance = (...rgbs) =>
   getDeltaEDistance(...rgbs.map(compose(zipObj(['L', 'A', 'B']), rgbToLab)))
 
-export const findSimilarDefinition = definitions => rgb => {
-  const getNearestDefinition = nearest => current =>
+export const findSimilarDefinition = (definitions) => (rgb) => {
+  const getNearestDefinition = (nearest) => (current) =>
     nearest == null || nearest.distance > current.distance ? current : nearest
 
   const traverseDefinitions = (nearest, idx = 0) => {

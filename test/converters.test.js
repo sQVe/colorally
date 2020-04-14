@@ -7,7 +7,7 @@ import { definitions } from './setup'
 
 describe('module: converters', () => {
   describe('hexToRgb', () => {
-    definitions.forEach(def => {
+    definitions.forEach((def) => {
       it(`should convert hex to RGB (${def.name})`, () => {
         expect(hexToRgb(def.hex)).toEqual(def.rgb)
       })
@@ -15,7 +15,7 @@ describe('module: converters', () => {
   })
 
   describe('strToHex', () => {
-    definitions.forEach(def => {
+    definitions.forEach((def) => {
       it(`should convert clean hex-string to hex (${def.name})`, () => {
         expect(strToHex(def.hexString)).toEqual(def.hex)
       })
@@ -30,8 +30,8 @@ describe('module: converters', () => {
     })
 
     definitions
-      .filter(def => def.shortHexString != null)
-      .forEach(def => {
+      .filter((def) => def.shortHexString != null)
+      .forEach((def) => {
         it(`should convert short hex-string to hex (${def.name})`, () => {
           expect(strToHex(def.shortHexString)).toEqual(def.hex)
         })
@@ -39,7 +39,7 @@ describe('module: converters', () => {
   })
 
   describe('rgbToLab', () => {
-    definitions.forEach(def => {
+    definitions.forEach((def) => {
       it(`should convert RGB to LAB (${def.name})`, () => {
         expect(rgbToLab(def.rgb)).toEqual(def.lab)
       })
