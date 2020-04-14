@@ -110,7 +110,7 @@ describe('module: ruler', () => {
       const subject = findSimilarDefinition(definitions)([150, 0, 0])
 
       expect(subject.name).toEqual('Maroon')
-      expect(subject.distance).toEqual(4.455135911193057)
+      expect(subject.distance).toEqual(4.455135911193059)
     })
 
     it('should find the closest match (Green)', () => {
@@ -124,14 +124,14 @@ describe('module: ruler', () => {
       const subject = findSimilarDefinition(definitions)([0, 200, 0])
 
       expect(subject.name).toEqual('Lime')
-      expect(subject.distance).toEqual(12.582385494908488)
+      expect(subject.distance).toEqual(12.582385494908493)
     })
 
     it('should find the closest match (Navy)', () => {
       const subject = findSimilarDefinition(definitions)([0, 0, 150])
 
       expect(subject.name).toEqual('Navy')
-      expect(subject.distance).toEqual(3.0821441204911646)
+      expect(subject.distance).toEqual(3.082144120491169)
     })
 
     it('should find the closest match (Blue)', () => {
