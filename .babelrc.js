@@ -8,7 +8,7 @@ module.exports = {
         corejs: 3,
         loose: true,
         modules: NODE_ENV === 'test' ? 'auto' : false,
-        targets: { node: 8 },
+        targets: { node: 10 },
         useBuiltIns: 'usage',
       },
     ],
