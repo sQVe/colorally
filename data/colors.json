@@ -728,6 +728,10 @@
     "rgb": [205, 92, 92]
   },
   {
+    "name": "Chili Red",
+    "rgb": [226, 61, 40]
+  },
+  {
     "name": "China Rose",
     "rgb": [168, 81, 110]
   },
@@ -1226,6 +1230,10 @@
   {
     "name": "Egyptian Blue",
     "rgb": [16, 52, 166]
+  },
+  {
+    "name": "Eigengrau",
+    "rgb": [22, 22, 29]
   },
   {
     "name": "Electric Blue",
@@ -2600,6 +2608,10 @@
     "rgb": [171, 205, 239]
   },
   {
+    "name": "Pale Dogwood",
+    "rgb": [237, 122, 155]
+  },
+  {
     "name": "Pale Gold",
     "rgb": [230, 190, 138]
   },
@@ -2658,6 +2670,10 @@
   {
     "name": "Paradise Pink",
     "rgb": [230, 62, 98]
+  },
+  {
+    "name": "Parchment",
+    "rgb": [241, 233, 210]
   },
   {
     "name": "Pastel Blue",
@@ -3050,6 +3066,10 @@
   {
     "name": "Rocket Metallic",
     "rgb": [138, 127, 128]
+  },
+  {
+    "name": "Rojo Spanish Red",
+    "rgb": [169, 17, 1]
   },
   {
     "name": "Roman Silver",
@@ -3480,6 +3500,10 @@
     "rgb": [168, 55, 49]
   },
   {
+    "name": "Syracuse Orange",
+    "rgb": [212, 69, 0]
+  },
+  {
     "name": "Tan",
     "rgb": [210, 180, 140]
   },
@@ -3678,6 +3702,10 @@
   {
     "name": "University Of California Gold",
     "rgb": [183, 135, 39]
+  },
+  {
+    "name": "University Of Pennsylvania Red",
+    "rgb": [165, 0, 33]
   },
   {
     "name": "Unmellow Yellow",
