@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/sQVe/colorally/compare/v1.0.8...v1.0.9) (2020-08-19)
+
+
+### Bug Fixes
+
+* **definitions:** update definitions (cron build: 2487) ([52349f2](https://github.com/sQVe/colorally/commit/52349f241ffeadb02759a46a89be3953eb660d90))
+
 ## [1.0.8](https://github.com/sQVe/colorally/compare/v1.0.7...v1.0.8) (2020-07-22)
 
 
