@@ -13,7 +13,7 @@
   },
   {
     "name": "Aero Blue",
-    "rgb": [201, 255, 229]
+    "rgb": [192, 232, 213]
   },
   {
     "name": "African Violet",
@@ -728,6 +728,10 @@
     "rgb": [205, 92, 92]
   },
   {
+    "name": "Chili Red",
+    "rgb": [226, 61, 40]
+  },
+  {
     "name": "China Rose",
     "rgb": [168, 81, 110]
   },
@@ -746,6 +750,10 @@
   {
     "name": "Chocolate",
     "rgb": [210, 105, 30]
+  },
+  {
+    "name": "Chocolate Cosmos",
+    "rgb": [88, 17, 26]
   },
   {
     "name": "Chrome Yellow",
@@ -1228,6 +1236,10 @@
     "rgb": [16, 52, 166]
   },
   {
+    "name": "Eigengrau",
+    "rgb": [22, 22, 29]
+  },
+  {
     "name": "Electric Blue",
     "rgb": [125, 249, 255]
   },
@@ -1370,14 +1382,6 @@
   {
     "name": "Flax",
     "rgb": [238, 220, 130]
-  },
-  {
-    "name": "Flickr Blue",
-    "rgb": [0, 99, 220]
-  },
-  {
-    "name": "Flickr Pink",
-    "rgb": [251, 0, 129]
   },
   {
     "name": "Flirt",
@@ -1702,6 +1706,14 @@
   {
     "name": "Jade",
     "rgb": [0, 168, 107]
+  },
+  {
+    "name": "Japanese Carmine",
+    "rgb": [157, 41, 51]
+  },
+  {
+    "name": "Japanese Violet",
+    "rgb": [91, 50, 86]
   },
   {
     "name": "Jasmine",
@@ -2600,6 +2612,10 @@
     "rgb": [171, 205, 239]
   },
   {
+    "name": "Pale Dogwood",
+    "rgb": [237, 122, 155]
+  },
+  {
     "name": "Pale Gold",
     "rgb": [230, 190, 138]
   },
@@ -2658,6 +2674,10 @@
   {
     "name": "Paradise Pink",
     "rgb": [230, 62, 98]
+  },
+  {
+    "name": "Parchment",
+    "rgb": [241, 233, 210]
   },
   {
     "name": "Pastel Blue",
@@ -3050,6 +3070,10 @@
   {
     "name": "Rocket Metallic",
     "rgb": [138, 127, 128]
+  },
+  {
+    "name": "Rojo Spanish Red",
+    "rgb": [169, 17, 1]
   },
   {
     "name": "Roman Silver",
@@ -3480,6 +3504,10 @@
     "rgb": [168, 55, 49]
   },
   {
+    "name": "Syracuse Orange",
+    "rgb": [212, 69, 0]
+  },
+  {
     "name": "Tan",
     "rgb": [210, 180, 140]
   },
@@ -3680,6 +3708,10 @@
     "rgb": [183, 135, 39]
   },
   {
+    "name": "University Of Pennsylvania Red",
+    "rgb": [165, 0, 33]
+  },
+  {
     "name": "Unmellow Yellow",
     "rgb": [255, 255, 102]
   },
@@ -3846,10 +3878,6 @@
   {
     "name": "Xanthic",
     "rgb": [238, 237, 9]
-  },
-  {
-    "name": "Xiketic",
-    "rgb": [12, 2, 15]
   },
   {
     "name": "Yale Blue",
