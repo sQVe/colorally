@@ -7,7 +7,7 @@ import shebang from 'rollup-plugin-add-shebang'
 import pkg from './package.json'
 
 const bundleTarget = process.env.BUILD_BUNDLE
-const dependencies = [
+const externalDependencies = [
   'core-js',
   'data/colors',
   'fs',
@@ -44,7 +44,7 @@ const external = (dependencies) => (id) =>
     .some(Boolean)
 
 const bundle = presetBundleDefaults({
-  external: external(dependencies),
+  external: external(externalDependencies),
   input: 'src/index.js',
   output: { exports: 'named', indent: false },
   plugins: [nodeResolve(), commonjs(), json()],
@@ -79,7 +79,7 @@ const bundles = [
     type: 'es',
   }),
   {
-    external: external(dependencies),
+    external: external(externalDependencies),
     input: 'src/color-scaper.js',
     output: { format: 'cjs', file: '.tmp/color-scraper.js' },
     plugins: [json()],
