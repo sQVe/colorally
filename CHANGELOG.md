@@ -1,3 +1,16 @@
+# [2.0.0](https://github.com/sQVe/colorally/compare/v1.0.9...v2.0.0) (2020-09-08)
+
+
+### Bug Fixes
+
+* **ci:** run travis on node 12 ([e877350](https://github.com/sQVe/colorally/commit/e877350f5dea30c229c6609751fef7e2d85c4018))
+* **definitions:** update definitions ([34fb2da](https://github.com/sQVe/colorally/commit/34fb2da74a8be61cd85ce070acf2525afe9b3ead))
+
+
+### BREAKING CHANGES
+
+* **ci:** No longer support Node version lower than 10.
+
 ## [1.0.9](https://github.com/sQVe/colorally/compare/v1.0.8...v1.0.9) (2020-08-19)
 
 
