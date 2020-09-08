@@ -14,7 +14,7 @@ export const definitions = [
   {
     hex: 0x000080,
     hexString: '000080',
-    lab: [12.975311577716514, 47.50776531013767, -64.70427324580548],
+    lab: [12.975311577716514, 47.50776531013767, -64.70427324580545],
     name: 'Navy',
     rgb: [0, 0, 128],
   },
@@ -37,14 +37,14 @@ export const definitions = [
   {
     hex: 0x008080,
     hexString: '008080',
-    lab: [48.25607381337552, -28.841559463342104, -8.481050086288366],
+    lab: [48.25607381337551, -28.841559463342048, -8.481050086288388],
     name: 'Teal',
     rgb: [0, 128, 128],
   },
   {
     hex: 0x00ff00,
     hexString: '00ff00',
-    lab: [87.73703347354422, -86.18463649762525, 83.18116474777854],
+    lab: [87.73703347354422, -86.1846364976253, 83.18116474777854],
     name: 'Lime',
     rgb: [0, 255, 0],
     shortHexString: '0f0',
@@ -60,21 +60,21 @@ export const definitions = [
   {
     hex: 0x800000,
     hexString: '800000',
-    lab: [25.530784572416174, 48.05523604548828, 38.05963258349509],
+    lab: [25.530784572416174, 48.05523604548825, 38.05963258349509],
     name: 'Maroon',
     rgb: [128, 0, 0],
   },
   {
     hex: 0x800080,
     hexString: '800080',
-    lab: [29.782100092098077, 58.93983731904201, -36.49792996282386],
+    lab: [29.78210009209807, 58.939837319042034, -36.497929962823875],
     name: 'Purple',
     rgb: [128, 0, 128],
   },
   {
     hex: 0x808000,
     hexString: '808000',
-    lab: [51.86833136334822, -12.930760098732952, 56.677284661941485],
+    lab: [51.86833136334822, -12.930760098733007, 56.677284661941485],
     name: 'Olive',
     rgb: [128, 128, 0],
   },
@@ -126,5 +126,5 @@ export const definitions = [
   },
 ]
 
-export const getDefinitionByName = name =>
-  definitions.find(def => def.name.toLowerCase() === name.toLowerCase())
+export const getDefinitionByName = (name) =>
+  definitions.find((def) => def.name.toLowerCase() === name.toLowerCase())

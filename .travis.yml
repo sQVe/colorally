@@ -2,7 +2,7 @@ os: linux
 dist: trusty
 language: node_js
 node_js:
-  - 10
+  - 12
 cache: npm
 script:
   - npm run lint
@@ -13,6 +13,5 @@ after_success:
   - scripts/auto-scrape.sh
 deploy:
   provider: script
-  skip_cleanup: true
-  script:
-    - npx semantic-release
+  cleanup: true
+  script: npx semantic-release

@@ -12,7 +12,7 @@ import {
   writeToFile,
 } from './helpers'
 
-const processColorhexa = async browser => {
+const processColorhexa = async (browser) => {
   const page = await browser.newPage()
 
   await page.goto('https://www.colorhexa.com/color-names')
@@ -22,7 +22,7 @@ const processColorhexa = async browser => {
     const tableBodyElement = document.querySelector('table.color-list > tbody')
     const tableRowElements = tableBodyElement.querySelectorAll('tr')
 
-    return Array.from(tableRowElements).map(tableRowElement => {
+    return Array.from(tableRowElements).map((tableRowElement) => {
       const [name, val] = tableRowElement.children
 
       return {
@@ -33,7 +33,7 @@ const processColorhexa = async browser => {
   })
 }
 
-const processWikipedia = async browser => {
+const processWikipedia = async (browser) => {
   const paths = [
     'List_of_colors:_A%E2%80%93F',
     'List_of_colors:_G%E2%80%93M',
@@ -41,7 +41,7 @@ const processWikipedia = async browser => {
   ]
 
   return Promise.all(
-    paths.map(async path => {
+    paths.map(async (path) => {
       const page = await browser.newPage()
 
       await page.goto('https://en.wikipedia.org/wiki/' + path)
@@ -53,7 +53,7 @@ const processWikipedia = async browser => {
         )
         const tableRowElements = tableBodyElement.querySelectorAll('tr')
 
-        return Array.from(tableRowElements).map(tableRowElement => {
+        return Array.from(tableRowElements).map((tableRowElement) => {
           const [name, val] = tableRowElement.children
 
           return {
@@ -66,7 +66,7 @@ const processWikipedia = async browser => {
   )
 }
 
-const scrapeSources = async browser => {
+const scrapeSources = async (browser) => {
   const res = await Promise.all([
     processColorhexa(browser),
     processWikipedia(browser),

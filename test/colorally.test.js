@@ -17,7 +17,7 @@ const fixtures = {
 
 const findSimilarDefinitionMock = jest.fn()
 findSimilarDefinition.mockImplementation(() =>
-  findSimilarDefinitionMock.mockImplementation(rgb => rgb)
+  findSimilarDefinitionMock.mockImplementation((rgb) => rgb)
 )
 
 hexToRgb.mockImplementation(() => fixtures.rgb)
@@ -30,7 +30,7 @@ describe('module: colorally', () => {
       expect(findSimilarDefinitionMock).toHaveBeenCalledTimes(1)
       expect(findSimilarDefinitionMock).toHaveBeenCalledWith(fixtures.rgb)
 
-      colorally(fixtures.rgb.map(x => x.toString()))
+      colorally(fixtures.rgb.map((x) => x.toString()))
       expect(findSimilarDefinitionMock).toHaveBeenCalledTimes(2)
       expect(findSimilarDefinitionMock).toHaveBeenCalledWith(fixtures.rgb)
     })
