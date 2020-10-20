@@ -38,7 +38,7 @@
     "colorally": "./lib/cli.js"
   },
   "main": "lib/colorally.js",
-  "module": "es/colorally.js",
+  "module": "lib/colorally.es.js",
   "files": [
     "data",
     "es",
@@ -47,7 +47,6 @@
   "devDependencies": {
     "@babel/cli": "~7.11.0",
     "@babel/core": "~7.11.0",
-    "@babel/plugin-transform-runtime": "~7.11.0",
     "@babel/preset-env": "~7.11.0",
     "@rollup/plugin-commonjs": "~15.0.0",
     "@rollup/plugin-json": "~4.1.0",
@@ -80,10 +79,8 @@
     "semantic-release": "~17.1.0"
   },
   "dependencies": {
-    "@babel/runtime": "~7.11.0",
     "chalk": "~4.1.0",
     "clipboardy": "~2.3.0",
-    "core-js": "~3.6.0",
     "delta-e": "0.0.8"
   }
 }

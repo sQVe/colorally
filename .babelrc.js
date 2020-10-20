@@ -1,19 +1,12 @@
 const { NODE_ENV } = process.env
 
+const common = { targets: { node: 10 } }
+
 module.exports = {
   presets: [
     [
       '@babel/env',
-      {
-        corejs: 3,
-        loose: true,
-        modules: NODE_ENV === 'test' ? 'auto' : false,
-        targets: { node: 10 },
-        useBuiltIns: 'usage',
-      },
+      NODE_ENV === 'test' ? common : { ...common, loose: true, modules: false },
     ],
   ],
-  plugins: ['cjs', 'test'].includes(NODE_ENV)
-    ? [['@babel/transform-runtime']]
-    : [],
 }

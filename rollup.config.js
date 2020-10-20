@@ -54,29 +54,24 @@ const bundle = presetBundleDefaults({
 const bundles = [
   bundle({
     output: { format: 'cjs', file: `lib/${pkg.name}.js` },
-    plugins: [babel({ runtimeHelpers: true })],
+    plugins: [babel()],
     type: 'cjs',
+  }),
+  bundle({
+    output: { format: 'es', file: `es/${pkg.name}.es.js` },
+    plugins: [babel()],
+    type: 'es',
   }),
   bundle({
     input: 'src/cli.js',
     output: { format: 'cjs', file: `lib/cli.js` },
     plugins: [
-      babel({ runtimeHelpers: true }),
+      babel(),
       shebang({
         include: `lib/cli.js`,
       }),
     ],
     type: 'cli',
-  }),
-  bundle({
-    output: { format: 'es', file: `es/${pkg.name}.js` },
-    plugins: [babel({ runtimeHelpers: true })],
-    type: 'es',
-  }),
-  bundle({
-    output: { format: 'es', file: `es/${pkg.name}.mjs` },
-    plugins: [babel({ runtimeHelpers: true })],
-    type: 'es',
   }),
   {
     external: external(externalDependencies),
