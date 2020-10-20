@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/sQVe/colorally/compare/v2.0.1...v2.0.2) (2020-10-20)
+
+
+### Bug Fixes
+
+* **build:** minimize bundle size ([5f686d8](https://github.com/sQVe/colorally/commit/5f686d83400418e5d79fca84292cf59b3b9bbb57))
+
 ## [2.0.1](https://github.com/sQVe/colorally/compare/v2.0.0...v2.0.1) (2020-09-23)
 
 
