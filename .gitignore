@@ -28,7 +28,6 @@ package.lock
 # Build generated.
 coverage/
 lib/
-es/
 .tmp/
 
 # SublimeText.
