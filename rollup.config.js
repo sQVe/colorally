@@ -58,7 +58,7 @@ const bundles = [
     type: 'cjs',
   }),
   bundle({
-    output: { format: 'es', file: `es/${pkg.name}.es.js` },
+    output: { format: 'es', file: `lib/${pkg.name}.es.js` },
     plugins: [babel()],
     type: 'es',
   }),
