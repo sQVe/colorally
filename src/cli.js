@@ -5,6 +5,8 @@
 import chalk from 'chalk'
 import { writeSync as writeToClipboard } from 'clipboardy'
 
+import { version } from '../package.json'
+import colorally from './colorally'
 import {
   compose,
   flatten,
@@ -22,8 +24,6 @@ import {
   toTitleCase,
   toUpperCase,
 } from './utility'
-import colorally from './colorally'
-import { version } from '../package.json'
 
 const { argv, env } = process
 

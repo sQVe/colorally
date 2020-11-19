@@ -5,9 +5,9 @@
 jest.mock('../src/converters')
 jest.mock('../src/ruler')
 
-import { findSimilarDefinition } from '../src/ruler'
-import { hexToRgb, strToHex } from '../src/converters'
 import colorally from '../src/colorally'
+import { hexToRgb, strToHex } from '../src/converters'
+import { findSimilarDefinition } from '../src/ruler'
 
 const fixtures = {
   hex: 0x01027b,

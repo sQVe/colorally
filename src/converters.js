@@ -2,7 +2,7 @@
 //  ┃  ┃ ┃┃┗┫┃┏┛┣╸ ┣┳┛ ┃ ┣╸ ┣┳┛┗━┓
 //  ┗━╸┗━┛╹ ╹┗┛ ┗━╸╹┗╸ ╹ ┗━╸╹┗╸┗━┛
 
-import { duplicate, compose, take } from './utility'
+import { compose, duplicate, take } from './utility'
 
 const omitTypeIndicators = (str) => str.replace(/^#|0x/, '')
 const expandShortHex = (str) =>

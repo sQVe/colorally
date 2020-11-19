@@ -2,10 +2,10 @@
 //  ┃  ┃ ┃┃  ┃ ┃┣┳┛┣━┫┃  ┃  ┗┳┛
 //  ┗━╸┗━┛┗━╸┗━┛╹┗╸╹ ╹┗━╸┗━╸ ╹
 
-import { isString } from './utility'
+import colors from '../data/colors.json'
 import { hexToRgb, strToHex } from './converters'
 import { findSimilarDefinition } from './ruler'
-import colors from '../data/colors.json'
+import { isString } from './utility'
 
 /**
  * Find visually similar color definition.

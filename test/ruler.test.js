@@ -2,8 +2,8 @@
 //  ┣┳┛┃ ┃┃  ┣╸ ┣┳┛    ┃ ┣╸ ┗━┓ ┃
 //  ╹┗╸┗━┛┗━╸┗━╸╹┗╸    ╹ ┗━╸┗━┛ ╹
 
-import { definitions, getDefinitionByName } from './setup'
 import { findSimilarDefinition, measureDistance } from '../src/ruler'
+import { definitions, getDefinitionByName } from './setup'
 
 describe('module: ruler', () => {
   describe('measureDistance', () => {
