@@ -4,8 +4,8 @@
 
 import { getDeltaE00 as getDeltaEDistance } from 'delta-e'
 
-import { compose, zipObj } from './utility'
 import { rgbToLab } from './converters'
+import { compose, zipObj } from './utility'
 
 export const measureDistance = (...rgbs) =>
   getDeltaEDistance(...rgbs.map(compose(zipObj(['L', 'A', 'B']), rgbToLab)))

@@ -2,11 +2,11 @@
 //  ┣━┫┣╸ ┃  ┣━┛┣╸ ┣┳┛┗━┓
 //  ╹ ╹┗━╸┗━╸╹  ┗━╸╹┗╸┗━┛
 
-import path from 'path'
 import fs from 'fs'
+import path from 'path'
 
-import { compose, isArrayEqual, toTitleCase } from './utility'
 import { hexToRgb, strToHex } from './converters'
+import { compose, isArrayEqual, toTitleCase } from './utility'
 
 export const convertToDefinitions = (res) =>
   res.reduce(
