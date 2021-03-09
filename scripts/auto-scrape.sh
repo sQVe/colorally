@@ -8,8 +8,9 @@
 set -o errexit
 
 setup_git() {
-  git config --global user.email "travis@travis-ci.org"
-  git config --global user.name "Travis CI"
+  git config --global user.email "github@github.com"
+  git config --global user.name "GitHub Actions"
+  git config pull.ff only
 }
 
 check_data_changes() {
@@ -25,23 +26,17 @@ check_data_changes() {
 
 commit_changes() {
   echo "Committing to master branch..."
-  git add .
 
-  if [[ $TRAVIS_EVENT_TYPE == "cron" ]]; then
-    git commit --message "fix(definitions): update definitions (cron build: $TRAVIS_BUILD_NUMBER)"
-  else
-    git commit --message "fix(definitions): update definitions (build: $TRAVIS_BUILD_NUMBER)"
-  fi
+  git add .
+  git commit --message "fix(submodules): update snippets (run: $GITHUB_RUN_NUMBER)"
 }
 
 push_changes() {
   echo "Pushing to master branch..."
-  git push --force --quiet "https://${GH_TOKEN}@github.com/sQVe/colorally.git" master >/dev/null 2>&1
+  git push --force --quiet "https://${GH_ADMIN_TOKEN}@github.com/sQVe/colorally.git" master > /dev/null 2>&1
 }
 
-if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_EVENT_TYPE != "pull_request" ]]; then
-  setup_git
-  check_data_changes
-  commit_changes
-  push_changes
-fi
+setup_git
+check_data_changes
+commit_changes
+push_changes
