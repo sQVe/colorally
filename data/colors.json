@@ -2572,6 +2572,10 @@
     "rgb": [255, 110, 74]
   },
   {
+    "name": "Oxblood",
+    "rgb": [74, 0, 0]
+  },
+  {
     "name": "Oxford Blue",
     "rgb": [0, 33, 71]
   },
@@ -3484,6 +3488,14 @@
     "rgb": [228, 217, 111]
   },
   {
+    "name": "Strawberry",
+    "rgb": [250, 80, 83]
+  },
+  {
+    "name": "Strawberry Blonde",
+    "rgb": [255, 147, 97]
+  },
+  {
     "name": "Sugar Plum",
     "rgb": [145, 78, 117]
   },
@@ -3882,6 +3894,10 @@
   {
     "name": "Xanthic",
     "rgb": [238, 237, 9]
+  },
+  {
+    "name": "Xanthous",
+    "rgb": [241, 180, 47]
   },
   {
     "name": "Yale Blue",
