@@ -1,3 +1,11 @@
+## [2.0.3](https://github.com/sQVe/colorally/compare/v2.0.2...v2.0.3) (2021-03-09)
+
+
+### Bug Fixes
+
+* add github actions ([7993629](https://github.com/sQVe/colorally/commit/79936298ace0471ecf550884ba33fe28f2088ff5))
+* update definitions ([81037c6](https://github.com/sQVe/colorally/commit/81037c6c51ee3565d0b3472d96d698f14e926b71))
+
 ## [2.0.2](https://github.com/sQVe/colorally/compare/v2.0.1...v2.0.2) (2020-10-20)
 
 
