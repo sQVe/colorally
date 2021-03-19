@@ -10,12 +10,9 @@ set -o errexit
 setup_git() {
   git config --global user.email "github@github.com"
   git config --global user.name "GitHub Actions"
-  git config pull.ff only
 }
 
 check_data_changes() {
-  git checkout master
-
   npm run scrape
 
   if [[ $(git status --short | wc -l) -eq 0 ]]; then
