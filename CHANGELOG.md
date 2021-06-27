@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/sQVe/colorally/compare/v2.0.3...v2.0.4) (2021-06-27)
+
+
+### Bug Fixes
+
+* **submodules:** update snippets (run: 16) ([6821c76](https://github.com/sQVe/colorally/commit/6821c764496ec6873ba5c9781bda6852550c2a1c))
+
 ## [2.0.3](https://github.com/sQVe/colorally/compare/v2.0.2...v2.0.3) (2021-03-09)
 
 
