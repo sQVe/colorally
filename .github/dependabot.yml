@@ -1,0 +1,73 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "08:00"
+    timezone: Europe/Stockholm
+  open-pull-requests-limit: 10
+  reviewers:
+  - sQVe
+  ignore:
+  - dependency-name: rollup
+    versions:
+    - 2.38.0
+    - 2.38.3
+    - 2.38.5
+    - 2.39.0
+    - 2.40.0
+    - 2.43.1
+  - dependency-name: "@babel/preset-env"
+    versions:
+    - 7.12.11
+    - 7.12.13
+    - 7.12.16
+    - 7.12.17
+    - 7.13.8
+    - 7.13.9
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.22
+    - 14.14.25
+    - 14.14.28
+    - 14.14.31
+    - 14.14.32
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.12.10
+    - 7.12.13
+    - 7.12.16
+    - 7.12.17
+    - 7.13.8
+  - dependency-name: eslint
+    versions:
+    - 7.18.0
+    - 7.19.0
+    - 7.20.0
+    - 7.21.0
+  - dependency-name: "@babel/cli"
+    versions:
+    - 7.12.10
+    - 7.12.13
+    - 7.12.16
+    - 7.12.17
+    - 7.13.0
+  - dependency-name: "@rollup/plugin-node-resolve"
+    versions:
+    - 11.1.0
+    - 11.1.1
+    - 11.2.0
+  - dependency-name: "@rollup/plugin-commonjs"
+    versions:
+    - 17.0.0
+    - 17.1.0
+  - dependency-name: node-notifier
+    versions:
+    - 8.0.1
+  - dependency-name: eslint-config-sqve
+    versions:
+    - 2.15.11
+  - dependency-name: eslint-plugin-standard
+    versions:
+    - 5.0.0
