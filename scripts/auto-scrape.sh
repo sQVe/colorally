@@ -25,7 +25,7 @@ commit_changes() {
   echo "Committing to master branch..."
 
   git add .
-  git commit --message "fix(submodules): update snippets (run: $GITHUB_RUN_NUMBER)"
+  git commit --message "fix(definitions): update definitions (run: $GITHUB_RUN_NUMBER)"
 }
 
 push_changes() {
