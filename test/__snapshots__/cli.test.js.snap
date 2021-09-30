@@ -104,7 +104,7 @@ Array [
 ]
 `;
 
-exports[`module: cli run should provide a more talkative result given --verbose option  1`] = `
+exports[`module: cli run should provide a more talkative result given --verbose option 1`] = `
 Array [
   Array [
     "Found [48;2;0;0;0m   [49m [1mBlack[22m [3m(0, 0, 0)[23m by a distance of [3m0.0000[23m.",
@@ -112,7 +112,7 @@ Array [
 ]
 `;
 
-exports[`module: cli run should provide a more talkative result given -v option  1`] = `
+exports[`module: cli run should provide a more talkative result given -v option 1`] = `
 Array [
   Array [
     "Found [48;2;0;0;0m   [49m [1mBlack[22m [3m(0, 0, 0)[23m by a distance of [3m0.0000[23m.",
