@@ -145,13 +145,13 @@ describe('module: cli', () => {
       expect(console.log).toHaveBeenCalledWith(`v${version}`)
     })
 
-    it('should provide a more talkative result given -v option ', () => {
+    it('should provide a more talkative result given -v option', () => {
       run(['-v', '#000'])
 
       expect(console.log.mock.calls).toMatchSnapshot()
     })
 
-    it('should provide a more talkative result given --verbose option ', () => {
+    it('should provide a more talkative result given --verbose option', () => {
       run(['--verbose', '#000'])
 
       expect(console.log.mock.calls).toMatchSnapshot()
