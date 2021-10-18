@@ -79,7 +79,7 @@
   },
   "dependencies": {
     "chalk": "~4.1.0",
-    "clipboardy": "~2.3.0",
+    "clipboardy": "~3.0.0",
     "delta-e": "0.0.8"
   }
 }
