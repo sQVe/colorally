@@ -1,3 +1,10 @@
+## [2.0.8](https://github.com/sQVe/colorally/compare/v2.0.7...v2.0.8) (2021-11-21)
+
+
+### Bug Fixes
+
+* **definitions:** update definitions (run: 37) ([8cf087e](https://github.com/sQVe/colorally/commit/8cf087e36db1dfae38585184297b82cd70c9276d))
+
 ## [2.0.7](https://github.com/sQVe/colorally/compare/v2.0.6...v2.0.7) (2021-11-07)
 
 
