@@ -1688,6 +1688,10 @@
     "rgb": [0, 65, 106]
   },
   {
+    "name": "Infrared",
+    "rgb": [255, 73, 108]
+  },
+  {
     "name": "International Klein Blue",
     "rgb": [0, 47, 167]
   },
